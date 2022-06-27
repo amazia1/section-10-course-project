@@ -1,7 +1,9 @@
 
 <template>
-    <base-button @click="setSelectedTab('resources')" type="button" :mode="isResourcesTabSelected">Resources</base-button>
-    <base-button @click="setSelectedTab('add-resource')" type="button" :mode="isAddResourceTabSelected">Add Resource</base-button>
+    <base-card>
+        <base-button @click="setSelectedTab('resources')" type="button" :mode="isResourcesTabSelected">Resources</base-button>
+        <base-button @click="setSelectedTab('add-resource')" type="button" :mode="isAddResourceTabSelected">Add Resource</base-button>
+    </base-card>
 </template>
 
 <script>
