@@ -42,12 +42,16 @@ export default {
             ]
         }
     },
+    mounted() {
+        this.resources.map(r => console.log(`id: ${r.id}`));
+    },
     methods: {
         setSelectedTab(tab) {
             this.selectedTab = tab;
         },
         removeResource(id) {
-            alert(id);
+            const index = this.resources.indexOf(id);
+            this.resources.splice(index, 1);
         }
     },
     computed: {

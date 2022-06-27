@@ -5,12 +5,12 @@
             <div>
                 <header>
                     <h3>{{ title }}</h3>
+                    <base-button type="button" @click="removeResource(id)" mode="flat">Delete</base-button>
                 </header>
             </div>
             <p>{{ description }}</p>
             <nav>
                 <a :href="link">View Resource</a>
-                <p @click="removeResource(id)">Remove</p>
             </nav>
         </base-card>
     </li>
@@ -25,9 +25,9 @@ export default {
 
 <style scoped>
     li {
-            margin: auto;
-            max-width: 40rem;
-        }
+        margin: auto;
+        max-width: 40rem;
+    }
 
     header {
         display: flex;
